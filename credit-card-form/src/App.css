@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+
+/* CARD */
+
+.card-container {
+  width: 40vw;
+  height: 35vh;
+  border: solid blue;
+  border-radius: 5px;
+}
+
+
+/* CARD TOP */
+
+.card-top{
+  border: solid red;
+}
+
+.chip {
+  width: 20%;
+  border: solid;
+}
+
+.flag {
+  width: 20%;
+  border: solid;
+}
+
+/* CARD MIDDLE */
+
+.card-middle{
+  border: solid green;
+}
+
+.card-number {
+  width: 20%;
+  border: solid;
+}
+
+/* CARD BOTTOM */
+
+.card-bottom{
+  border: solid yellowgreen;
+}
+
+.card-holder-name {
+  width: 20%;
+  border: solid;
+}
+
+.expires {
+  width: 20%;
+  border: solid;
+}
