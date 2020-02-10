@@ -24,17 +24,22 @@ class Card extends Component {
 
         <div className="card-middle d-flex justify-content-start py-3">
           <div className="card-number">
-            {this.props.cardNumber}
+            •••• •••• •••• ••••
+            {this.props.getCardNumber}
           </div>
         </div>
 
         <div className="card-bottom d-flex justify-content-between pt-3">
           <div className="card-holder-name">
-          {this.props.cardName}
+          {
+            this.props.getCardName.length ? this.props.getCardName : <p>YOUR NAME HERE</p>
+          }
           </div>
 
           <div className="expires">
-          {this.props.cardExpires}
+          <p>valid thru</p>
+          •• / ••
+          {this.props.getCardExpires}
           </div>
         </div>
         </div>

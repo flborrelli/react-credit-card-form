@@ -42,7 +42,7 @@ html {
 }
 
 .card-number {
-  width: 20%;
+  width: 70%;
   border: solid;
 }
 
@@ -53,11 +53,16 @@ html {
 }
 
 .card-holder-name {
-  width: 20%;
+  width: 70%;
   border: solid;
 }
 
 .expires {
   width: 20%;
   border: solid;
+}
+
+.expires p {
+  font-size: 0.7rem;
+  margin: 0;
 }

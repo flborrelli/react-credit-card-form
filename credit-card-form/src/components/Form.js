@@ -28,13 +28,15 @@ class Form extends Component {
     console.log(this.state)
     return(
       <div>
-      <Card cardNumber={this.state.cardName} cardName={this.state.cardNumber} cardCvc={this.state.cvc} cardExpires={this.state.expires}   />
-        <div className='form-container'>
-        <form>
-          <input onChange={this.handleInputChange} type="tel" name='cardNumber' placeholder='Card Number' maxLength='16'/>
-          <input onChange={this.handleInputChange} type="text" name='cardName' placeholder='Name'/>
-          <input onChange={this.handleInputChange} type="tel" name='expires' placeholder='Valid Thru'/>
-          <input onChange={this.handleInputChange} type="tel" name='cvc' placeholder='CVC' max='3'/>
+      <Card getCardNumber={this.state.cardNumber} getCardName={this.state.cardName} getCardCvc={this.state.cvc} getCardExpires={this.state.expires}   />
+        <div className='form-container mt-5'>
+        <form className='d-flex flex-column'>
+          <input className='mb-2' onChange={this.handleInputChange} type="tel" name='cardNumber' placeholder='Card Number' maxLength='16'/>
+          <input className='mb-2' onChange={this.handleInputChange} type="text" name='cardName' placeholder='Name'/>
+          <div className="d-flex justify-content-between">
+            <input onChange={this.handleInputChange} type="tel" name='expires' placeholder='Valid Thru'/>
+            <input onChange={this.handleInputChange} type="tel" name='cvc' placeholder='CVC' max='3'/>
+          </div>
         </form>
         </div>
 
