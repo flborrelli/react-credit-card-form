@@ -13,24 +13,24 @@ class FrontCard extends Component {
         <div className="card-container p-3">
 
         <div className="card-top d-flex justify-content-between">
-          <div className="chip">
-            CHIP
+          <div className="chip pl-4">
+            <img src="/images/chip.png" alt="card-chip"/>
           </div>
 
           <div className="flag">
-            FLAG
+          <img src="/images/mc-logo.png" alt="mc-logo"/>
           </div>
         </div>
 
-        <div className="card-middle d-flex justify-content-start py-3">
+        <div className="card-middle d-flex justify-content-start pl-2 mt-4">
           <div className="card-number">
             •••• •••• •••• ••••
             {this.props.getCardNumber}
           </div>
         </div>
 
-        <div className="card-bottom d-flex justify-content-between pt-3">
-          <div className="card-holder-name">
+        <div className="card-bottom d-flex justify-content-between mt-3 ml-2">
+          <div className="card-holder-name mt-3">
           {
             this.props.getCardName.length ? this.props.getCardName : <p>YOUR NAME HERE</p>
           }

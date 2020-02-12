@@ -22,8 +22,10 @@ class Form extends Component {
 
   handleInputChange(event) {
     const { name, value } = event.target;
+    const dots = '•';
     this.setState({
-      [name]: value
+      [name]: value,
+      // cardNumber: value + dots * (16 - value.length),
     });
   }
 
