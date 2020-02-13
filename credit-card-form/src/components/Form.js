@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FrontCard from "./FrontCard";
 import BackCard from "./BackCard";
 import ReactCardFlip from "react-card-flip";
+import NumberFormat from "react-number-format";
 
 class Form extends Component {
   constructor(props) {
@@ -20,11 +21,14 @@ class Form extends Component {
     this.handleClickBack = this.handleClickBack.bind(this);
   }
 
+  changeDots() {
+    const dots = "•";
+  }
+
   handleInputChange(event) {
     const { name, value } = event.target;
-    const dots = '•';
     this.setState({
-      [name]: value,
+      [name]: value.toUpperCase()
       // cardNumber: value + dots * (16 - value.length),
     });
   }
@@ -32,14 +36,14 @@ class Form extends Component {
   handleClickFront(event) {
     event.preventDefault();
     this.setState({
-      isFlipped: false,
+      isFlipped: false
     });
   }
 
   handleClickBack(event) {
     event.preventDefault();
     this.setState({
-      isFlipped: true,
+      isFlipped: true
     });
   }
 
@@ -61,14 +65,15 @@ class Form extends Component {
         </ReactCardFlip>
         <div className="form-container mt-5">
           <form className="d-flex flex-column">
-            <input
+            <NumberFormat
+              format="#### #### #### ####"
+              placeholder='•••• •••• •••• ••••'
+              mask={["•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•"]}
               className="mb-2"
               onChange={this.handleInputChange}
               onClick={this.handleClickFront}
-              type="tel"
               name="cardNumber"
               placeholder="Card Number"
-              maxLength="16"
             />
             <input
               className="mb-2"
@@ -79,10 +84,12 @@ class Form extends Component {
               placeholder="Name"
             />
             <div className="d-flex justify-content-between">
-              <input
+              <NumberFormat
+                format="##/##"
+                placeholder="••/••"
+                mask={["•", "•", "•", "•"]}
                 onChange={this.handleInputChange}
                 onClick={this.handleClickFront}
-                type="tel"
                 name="expires"
                 placeholder="Valid Thru"
               />

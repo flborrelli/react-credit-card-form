@@ -24,8 +24,9 @@ class FrontCard extends Component {
 
         <div className="card-middle d-flex justify-content-start pl-2 mt-4">
           <div className="card-number">
-            •••• •••• •••• ••••
-            {this.props.getCardNumber}
+            {
+              this.props.getCardNumber.length ? this.props.getCardNumber : <p>•••• •••• •••• ••••</p>
+            }
           </div>
         </div>
 
@@ -36,10 +37,11 @@ class FrontCard extends Component {
           }
           </div>
 
-          <div className="expires">
-          <p>valid thru</p>
-          •• / ••
-          {this.props.getCardExpires}
+          <div className="expires mt-3">
+            <p className='valid'>valid thru</p>
+            {
+              this.props.getCardExpires.length ? this.props.getCardExpires : <p className='dots'>••/••</p>
+            }
           </div>
         </div>
         </div>
